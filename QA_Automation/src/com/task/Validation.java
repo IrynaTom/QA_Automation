@@ -14,10 +14,20 @@ public class Validation {
         }
     }
 
-    public static boolean isValidAge(String age) {
-        int temp =Integer.parseInt(age);
-        if (age.isEmpty() || temp > 100 || temp < 0 ) {
-            System.out.println("The age is required field and more 0 and less 100");
+    public static boolean isValidStringAge(String age) {
+
+        if (age.isEmpty()  ) {
+            System.out.println("The age is required field");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    public static boolean isValidAge(int age) {
+
+        if ( age > 100 || age < 0 ) {
+            System.out.println("The age is more 0 and less 100");
             return false;
         }
         else{

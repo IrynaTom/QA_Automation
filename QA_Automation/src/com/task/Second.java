@@ -33,8 +33,12 @@ public class Second {
                 String email = sc.nextLine();
 
 //проврека на пустые поля
-                if (Validation.isValidName(name) && Validation.isValidAge(sn)) {
+                if (Validation.isValidName(name) && Validation.isValidStringAge(sn) ) {
                     int age = Integer.parseInt(sn);//преобразование сроки в число типа int
+                    if ( age > 100 || age < 0 ) {
+                        System.out.println("The age is more 0 and less 100");
+                        
+                    }
                     list.add(new Human(name, age, email));
                 }
 
