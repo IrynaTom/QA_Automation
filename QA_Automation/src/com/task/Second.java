@@ -13,11 +13,13 @@ public class Second {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);// создаём объект класса Scanner
         ArrayList<Human> list = new ArrayList<Human>();// создаем список
+
         // Делается выбор юзера
         System.out.println("1. Add new person\n2. Search people");
         System.out.println("Please input your choose:");
-        String f = sc.nextLine();
+        String f = sc.nextLine();//выбор действия
         int c = Integer.parseInt(f);//преобразование сроки в число типа int
+
         // Добавление юзеров
         if (c == 1) {
             while (list.size() <= 5) {
@@ -28,10 +30,13 @@ public class Second {
                 int age = Integer.parseInt(sn);//преобразование сроки в число типа int
                 System.out.println("Input your E-mail, please: ");
                 String email = sc.nextLine();
+
 //проврека на пустые поля
-                if (name == null || name.length() == 0 || sn==null ||sn.length()==0) {
-                    System.out.println("The name is required field");
+                if (name == null || name.length() == 0 || sn==null || sn.length()==0 || name.isEmpty()) {
+                    System.out.println("The name and age are required fields");
                 }
+
+//проврека на валидность хначений имени и возраста
                 else  if (age > 100 || age < 0 || name.length() < 4 ) {
                     System.out.println("Wrong data, try again");
                     continue;
@@ -44,9 +49,17 @@ public class Second {
             }
         }
         // поиск юзеров
-            else {
+            else if(c==2) {
                 System.out.println("Search");
+            System.out.println("Input your value of search, please: ");
+            String sv = sc.nextLine();
+            for(Human h: list){
+
             }
+            }
+        else{
+            System.out.println("Please,try again, type '1' or '2'");
+        }
             // System.out.println("Result array:");
             //for(Human human: list){
             //  human.printArray();
