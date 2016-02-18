@@ -13,7 +13,8 @@ public class Second {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);// создаём объект класса Scanner
         ArrayList<Human> list = new ArrayList<Human>();// создаем список
-Human user =new Human("Mincho",17,"email@example.com");
+        Human user = new Human("Mincho",17,"email@example.com");
+        list.add(user);
         // Делается выбор юзера
         System.out.println("1. Add new person\n2. Search people");
         System.out.println("Please input your choose:");
@@ -54,8 +55,9 @@ Human user =new Human("Mincho",17,"email@example.com");
             System.out.println("Input your value of search, please: ");
             String sv = sc.nextLine();
             for(Human h: list){
-    if(sv==h.getName()){
+    if(h.getName().equals(sv)){
         System.out.println(h.getName()+ " " +h.getAge()+ " " +h.getEmail());
+        break;
     }
                 else{
         System.out.println("Such user not found");
