@@ -21,31 +21,31 @@ public class Second {
         String f = sc.nextLine();//выбор действия
         int c = Integer.parseInt(f);//преобразование сроки в число типа int
 
-        // Добавление юзеров
+// Добавление юзеров
         if (c == 1) {
             while (list.size() <= 5) {
                 System.out.println("Input your name, please: ");
                 String name = sc.nextLine();
                 System.out.println("Input your age, please: ");
                 String sn = sc.nextLine();
-                int age = Integer.parseInt(sn);//преобразование сроки в число типа int
+
                 System.out.println("Input your E-mail, please: ");
                 String email = sc.nextLine();
 
 //проврека на пустые поля
-                if (name == null || name.length() == 0 || sn==null || sn.length()==0 || name.isEmpty()) {
-                    System.out.println("The name and age are required fields");
+                if (Validation.isValidName(name) && Validation.isValidAge(sn)) {
+                    int age = Integer.parseInt(sn);//преобразование сроки в число типа int
+                    list.add(new Human(name, age, email));
                 }
 
-//проврека на валидность хначений имени и возраста
-                else  if (age > 100 || age < 0 || name.length() < 4 ) {
-                    System.out.println("Wrong data, try again");
-                    continue;
-                }
+//проврека на валидность значения  возраста
 
 
 
-                list.add(new Human(name, age, email));
+              //  else  if (Validation.isValidAge(age) ) {
+
+                //}
+
 
             }
         }
