@@ -13,7 +13,16 @@ public class Human {
         this.age=age;
         this.email=email;
     }
-    public void printArray(){
+    public  void printArray(){
         System.out.println("Name" + " " + this.name + " " + "Age" + " " + this.age + " " +"E-mail" + " "+this.email );
+    }
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+    public String getEmail(){
+        return this.email;
     }
 }

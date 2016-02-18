@@ -54,7 +54,9 @@ public class Second {
             System.out.println("Input your value of search, please: ");
             String sv = sc.nextLine();
             for(Human h: list){
-
+    if(sv==h.getName()){
+        System.out.println(h.getName()+" "+h.getAge()+" "+h.getEmail());
+    }
             }
             }
         else{
