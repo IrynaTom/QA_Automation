@@ -15,13 +15,12 @@ public class Second {
         Scanner sc = new Scanner(System.in);// создаём объект класса Scanner
         ArrayList<Human> list = new ArrayList<Human>();// создаем список
         while (true) {
-            Human user = new Human("Mincho", 17, "email@example.com");
-            list.add(user);
             // Делается выбор юзера
-            System.out.println("1. Add new person\n2. Search people");
+            System.out.println("1. Add new person\n2. Search people\n0. Exit");
             System.out.println("Please input your choose:");
             String f = sc.nextLine();//выбор действия
             int c = Integer.parseInt(f);//преобразование сроки в число типа int
+
 
             switch (c) {
                 case 1:
@@ -51,6 +50,8 @@ public class Second {
                         }
                     }
                     break;
+                case 0:
+                    System.exit(0);
                     default:
                     System.out.println("Please,try again, type '1' or '2'");
                     break;
