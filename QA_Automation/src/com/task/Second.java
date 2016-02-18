@@ -21,7 +21,6 @@ public class Second {
             String f = sc.nextLine();//выбор действия
             int c = Integer.parseInt(f);//преобразование сроки в число типа int
 
-
             switch (c) {
                 case 1:
                     System.out.println("Input your name, please: ");
