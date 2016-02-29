@@ -85,9 +85,21 @@ public class Second {
                     }
                     break;
             }
+
+            try{
+            f = sc.nextLine();
+            c = Integer.parseInt(f);
+            }
+            catch(NumberFormatException e){
+            System.out.print("Input number,please");
+            }
+
+
         }
+
     }
     public enum Menu {Exit_0, Show_all_1, Add_2, Search_by_name_3, Search_by_age_4, Search_by_email_5}
+
 }
 
 
