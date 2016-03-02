@@ -17,7 +17,7 @@ public class EmailValidator {
 
     public static boolean isValidEmail(String email) {
 
-        if ( validate(email)) {
+   if ( validate(email)) {
             System.out.println("The email is not valid");
             return false;
         }
@@ -28,6 +28,7 @@ public class EmailValidator {
     public static boolean validate(final String email) {
         matcher = pattern.matcher(email);
         return matcher.matches();
+
     }
 
 }
