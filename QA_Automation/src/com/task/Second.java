@@ -19,7 +19,17 @@ public class Second {
             System.out.println("0. Exit\n4. Show all\n1. Add new person\n2. Search people by name\n3. Search people by e-mail\n5. Search people by age");
             System.out.println("Please input your choose:");
             String f = sc.nextLine();//выбор действия
+
+            try{
+           //  f = sc.nextLine();
+             int  c = Integer.parseInt(f);
+            }
+            catch(NumberFormatException e){
+                System.out.println("Input number,please");
+            }
+
             int c = Integer.parseInt(f);//преобразование сроки в число типа int
+
             switch (c) {
                 case 0:
                     System.exit(0);
@@ -34,7 +44,7 @@ public class Second {
                     System.out.println("Input your E-mail, please: ");
                     String email = sc.nextLine();
 
-                    if (Validation.isValidName(name) && Validation.isValidStringAge(sn)) {
+                    if (Validation.isValidName(name) && Validation.isValidStringAge(sn) && EmailValidator.isValidEmail(email)) {
                         int age = Integer.parseInt(sn);//преобразование сроки в число типа int
                         if (Validation.isValidAge(age)) {
                             list.add(new Human(name, age, email));
@@ -86,19 +96,12 @@ public class Second {
                     break;
             }
 
-            try{
-            f = sc.nextLine();
-            c = Integer.parseInt(f);
-            }
-            catch(NumberFormatException e){
-            System.out.print("Input number,please");
-            }
+
 
 
         }
 
     }
-    public enum Menu {Exit_0, Show_all_1, Add_2, Search_by_name_3, Search_by_age_4, Search_by_email_5}
 
 }
 
