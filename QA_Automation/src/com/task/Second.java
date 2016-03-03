@@ -1,7 +1,4 @@
 package com.task;
-import com.sun.istack.internal.Nullable;
-import com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
-import sun.invoke.empty.Empty;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +8,8 @@ import java.util.Scanner;
  * Created by Ира on 13.02.2016.
  */
 public class Second {
-    public static void main(String[] args) {
+
+  public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);// создаём объект класса Scanner
         ArrayList<Human> list = new ArrayList<Human>();// создаем список
         while (true) {
@@ -44,7 +42,7 @@ public class Second {
                     System.out.println("Input your E-mail, please: ");
                     String email = sc.nextLine();
 
-                    if (Validation.isValidName(name) && Validation.isValidStringAge(sn) && EmailValidator.isValidEmail(email)) {
+                    if (Validation.isValidName(name) && Validation.isValidStringAge(sn) && Validation.isValidEmail(email)) {
                         int age = Integer.parseInt(sn);//преобразование сроки в число типа int
                         if (Validation.isValidAge(age)) {
                             list.add(new Human(name, age, email));
@@ -95,13 +93,10 @@ public class Second {
                     }
                     break;
             }
-
-
-
+        }
 
         }
 
-    }
 
 }
 

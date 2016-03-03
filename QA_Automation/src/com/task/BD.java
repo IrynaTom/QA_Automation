@@ -1,5 +1,8 @@
 package com.task;
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 /**
  * Created by 1512 on 02.03.2016.
  */
