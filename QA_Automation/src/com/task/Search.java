@@ -8,18 +8,16 @@ import java.util.Scanner;
  */
 public class Search {
 
- /*   public void SearchByAge() {
-        Dao<User> userdao = new UserDao();//bd
-        System.out.println("Input your value(age) of search, please: ");
-        User user = userdao.getByEmail(readConsoleInput());
-        if (user != null){
-            System.out.println("Success! \n");
-            System.out.println(user);
-            mainMenu();
-        } else {
-            System.out.println("Nothing found");
-            searchUserByEmail();
-        }
+ /*                       System.out.println("Input your value(name) of search, please: ");
+                    String sv = sc.nextLine();
+                    for (Human h : list) {
+                        if (h.getName().equals(sv)) {
+                            System.out.println(h.getName() + " " + h.getAge() + " " + h.getEmail());
+                            break;
+                        } else {
+                            System.out.println("Such user not found");
+                        }
+                    }
 
     }*/
 
